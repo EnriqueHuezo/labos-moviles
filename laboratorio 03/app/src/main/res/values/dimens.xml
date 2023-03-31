@@ -3,4 +3,6 @@
     <dimen name="medium_text_size">20sp</dimen>
     <dimen name="big_text_size">40sp</dimen>
     <dimen name="mid_margin_top">12dp</dimen>
+    <dimen name="small_img_width">100dp</dimen>
+    <dimen name="small_img_height">100dp</dimen>
 </resources>

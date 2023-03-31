@@ -70,8 +70,8 @@
 
     <ImageView
         android:id="@+id/five_cents_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/small_img_width"
+        android:layout_height="@dimen/small_img_height"
         android:layout_marginBottom="64dp"
         app:layout_constraintBottom_toTopOf="@+id/quarter_image_view"
         app:layout_constraintEnd_toStartOf="@+id/ten_cents_image_view"
@@ -83,8 +83,8 @@
 
     <ImageView
         android:id="@+id/ten_cents_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/small_img_width"
+        android:layout_height="@dimen/small_img_height"
         android:layout_marginBottom="64dp"
         app:layout_constraintBottom_toTopOf="@+id/one_dollar_image_view"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,8 +96,8 @@
 
     <ImageView
         android:id="@+id/quarter_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/small_img_width"
+        android:layout_height="@dimen/small_img_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/one_dollar_image_view"
         app:layout_constraintHorizontal_bias="0.5"
@@ -107,8 +107,8 @@
 
     <ImageView
         android:id="@+id/one_dollar_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/small_img_width"
+        android:layout_height="@dimen/small_img_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
