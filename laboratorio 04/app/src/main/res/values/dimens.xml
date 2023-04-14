@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_text_size">24sp</dimen>
+    <dimen name="mid_gap">16dp</dimen>
+    <dimen name="big_gap">24dp</dimen>
+</resources>

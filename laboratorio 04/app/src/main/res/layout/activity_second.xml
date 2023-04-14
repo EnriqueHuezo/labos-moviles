@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/header_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:text="@string/header_text_secondary_view"
+        android:textSize="@dimen/header_text_size"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/email_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_text_view" />
+
+    <TextView
+        android:id="@+id/email_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/number_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
+
+    <TextView
+        android:id="@+id/number_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/action_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_text_view" />
+
+    <Button
+        android:id="@+id/action_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:text="@string/text_button_share"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/button_color"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_text_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
