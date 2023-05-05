@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.labo05.ui.movie.MovieViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundLayout"
+    tools:context=".InfoMovieFragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginTop="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:text="@string/new_movie_text_hint"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_text"
+        app:layout_constraintBottom_toTopOf="@+id/inputText_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputText_name"
+        android:text="@={viewmodel.name}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:background="@color/cardLayout"
+        android:hint="@string/name_text_hint"
+        android:padding="@dimen/medium_text"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputText_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputText_category"
+        android:text="@={viewmodel.category}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:background="@color/cardLayout"
+        android:hint="@string/category_text_hint"
+        android:padding="@dimen/medium_text"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputText_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText_name" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputText_description"
+        android:text="@={viewmodel.description}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:background="@color/cardLayout"
+        android:hint="@string/description_text_hint"
+        android:padding="@dimen/medium_text"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputText_calification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText_category" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputText_calification"
+        android:text="@={viewmodel.qualification}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mid_gap"
+        android:layout_marginEnd="@dimen/mid_gap"
+        android:layout_marginBottom="@dimen/mid_gap"
+        android:background="@color/cardLayout"
+        android:hint="@string/calification_text_hint"
+        android:padding="@dimen/medium_text"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/action_submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText_description" />
+
+    <Button
+        android:id="@+id/action_submit_button"
+        android:onClick="@{() -> viewmodel.createMovie()}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/submit_text_hint"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintBottom_toTopOf="@+id/inputText_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText_calification" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
